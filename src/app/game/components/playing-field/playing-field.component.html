@@ -1,0 +1,11 @@
+<div class="playing-field">
+  <app-table-score [playerScore]="playerScore$ | async" [computerScore]="computerScore$ | async"></app-table-score>
+  <div class="elements-container" [ngStyle]="{'--columns': FIELD_SIZE, '--rows': FIELD_SIZE}">
+    <app-playing-element
+      *ngFor="let el of (playingElements$ | async); trackBy: elementById"
+      [colorState]="el.colorState"
+      [id]="el.id"
+      (onClick)="onElementClickHandler($event)"
+    ></app-playing-element>
+  </div>
+</div>

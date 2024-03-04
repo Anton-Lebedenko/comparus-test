@@ -1,0 +1,16 @@
+.score {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+
+  &__element {
+    text-align: center;
+  }
+
+  &__number {
+    margin-top: 16px;
+  }
+}

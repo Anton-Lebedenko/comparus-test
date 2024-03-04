@@ -1,0 +1,20 @@
+<div class="container">
+  <form class="form" [formGroup]="menuForm">
+    <h2 class="form__header">Let's play a game. Enter the time in what you can react faster than computer by clicking on random aim</h2>
+    <mat-form-field class="form__filed full-width" appearance="outline">
+      <mat-label>Timeout</mat-label>
+      <input type="text" matInput [formControlName]="START_PAGE_FORM.TIMEOUT" placeholder="1000 (1 sec)">
+      <mat-hint align="end">milliseconds</mat-hint>
+      <mat-error *ngIf="hasTimeoutRequiredError">This field is <strong>required</strong></mat-error>
+      <mat-error *ngIf="hasTimeoutPatternError">Invalid format. Only numbers are allowed.</mat-error>
+    </mat-form-field>
+    <button
+      class="form__button"
+      routerLink="/game"
+      mat-raised-button
+      color="primary"
+      [disabled]="menuForm.invalid"
+      (click)="startGame(timeoutFieldValue)"
+    >START</button>
+  </form>
+</div>

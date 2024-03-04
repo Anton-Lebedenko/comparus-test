@@ -1,0 +1,13 @@
+.playing-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+
+  .elements-container {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+    gap: 7px;
+  }
+}

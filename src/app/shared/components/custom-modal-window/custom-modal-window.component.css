@@ -1,0 +1,34 @@
+::ng-deep.cdk-global-overlay-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+::ng-deep.custom-dialog > .mat-mdc-dialog-container {
+  padding: 1rem;
+}
+
+.text {
+  margin: 1rem;
+  font-size: 30px;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+.custom-button {
+  border: 1px solid #a0a0a0;
+}
+
+.custom-button:hover {
+  box-shadow: 0 0 10px 2px rgba(69, 34, 80, 0.34);
+}
